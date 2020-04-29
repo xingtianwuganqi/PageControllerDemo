@@ -27,6 +27,7 @@ class PageController: UIViewController {
     private var handTimer: Timer?
     private var nums: [String] = []
     private var imgIndex: Int = 0
+    private var nextImgIndex: Int = 0
     init() {
         self.pages = [
             ContentViewController.init(),
@@ -47,7 +48,7 @@ class PageController: UIViewController {
         
         // 模拟数据
         var urls : [String] = []
-        for i in 0 ..< 2 {
+        for i in 0 ..< 20 {
             let str = "图片 \(i)"
             urls.append(str)
         }
@@ -72,19 +73,20 @@ class PageController: UIViewController {
         current.label.text = self.imgUrls?[self.imgIndex]
         pageController.setViewControllers([current], direction: .forward, animated: true) { (finish) in
             self.currentIndex += 1
-            self.imgIndex += 1
-            if self.imgIndex >= self.imgUrls?.count ?? 0 {
-                self.imgIndex = 0
+//            self.imgIndex
+            self.nextImgIndex += self.imgIndex + 1
+            if self.nextImgIndex >= self.imgUrls?.count ?? 0 {
+                self.nextImgIndex = 0
             }
             let nextController = self.pages[self.currentIndex] as! ContentViewController
-            nextController.label.text = self.imgUrls?[self.imgIndex]
+            nextController.label.text = self.imgUrls?[self.nextImgIndex]
         }
         guard self.imgUrls?.count ?? 0 > 1 else{
 //            pageController.
             return
         }
         self.timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true, block: { [weak self](timer) in
-            
+
             self?.repeatAction()
         })
     }
@@ -115,11 +117,12 @@ class PageController: UIViewController {
                 self.currentIndex = 0
             }
             self.imgIndex += 1
-            if self.imgIndex >= self.imgUrls?.count ?? 0 {
-                self.imgIndex = 0
+            self.nextImgIndex = self.imgIndex + 1
+            if self.nextImgIndex >= self.imgUrls?.count ?? 0 {
+                self.nextImgIndex = 0
             }
             let nextController = self.pages[self.currentIndex] as! ContentViewController
-            nextController.label.text = self.imgUrls?[self.imgIndex]
+            nextController.label.text = self.imgUrls?[self.nextImgIndex]
         }
     }
     
@@ -238,11 +241,7 @@ extension PageController: UIPageViewControllerDelegate,UIPageViewControllerDataS
         
         let nextController = self.pages[self.currentIndex] as! ContentViewController
         nextController.label.text = self.imgUrls?[nextImgIndex]
-        
-        if self.imgUrls?.count == 2 {
-            nowVC.label.text = self.imgUrls?[self.imgIndex]
-        }
-        
+                
         print("previousIndex:",previousIndex,"nowVCIndex: ",nowVCIndex)
         self.createHandTimer()
 
