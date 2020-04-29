@@ -48,7 +48,7 @@ class PageController: UIViewController {
         
         // 模拟数据
         var urls : [String] = []
-        for i in 0 ..< 20 {
+        for i in 0 ..< 2 {
             let str = "图片 \(i)"
             urls.append(str)
         }
@@ -78,6 +78,10 @@ class PageController: UIViewController {
             if self.nextImgIndex >= self.imgUrls?.count ?? 0 {
                 self.nextImgIndex = 0
             }
+            
+            let onController = self.pages[2] as! ContentViewController
+            onController.label.text = self.imgUrls?.last
+            
             let nextController = self.pages[self.currentIndex] as! ContentViewController
             nextController.label.text = self.imgUrls?[self.nextImgIndex]
         }
@@ -118,9 +122,14 @@ class PageController: UIViewController {
             }
             self.imgIndex += 1
             self.nextImgIndex = self.imgIndex + 1
+            
+            
+            
             if self.nextImgIndex >= self.imgUrls?.count ?? 0 {
+                self.imgIndex = -1
                 self.nextImgIndex = 0
             }
+        
             let nextController = self.pages[self.currentIndex] as! ContentViewController
             nextController.label.text = self.imgUrls?[self.nextImgIndex]
         }
@@ -178,6 +187,10 @@ extension PageController: UIPageViewControllerDelegate,UIPageViewControllerDataS
         let nowVC = pageViewController.viewControllers?.first as! ContentViewController
         let previousIndex = self.index(controller: previous)
         let nowVCIndex = self.index(controller: nowVC)
+        
+        if self.imgIndex == -1 {
+            self.imgIndex = (self.imgUrls?.count ?? 0) - 1
+        }
         
         if nowVCIndex == 2 && previousIndex == 0 { // 向后
             print("向后")
