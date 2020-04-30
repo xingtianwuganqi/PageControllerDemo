@@ -10,7 +10,13 @@ import UIKit
 
 class ContentViewController: UIViewController {
     
-    lazy var imageview : UIImageView = {
+    var imgUrl: String? {
+        didSet {
+            loadImage(oldValue ?? "")
+        }
+    }
+    
+    private lazy var imageview : UIImageView = {
         let image = UIImageView()
         return image
     }()
@@ -41,5 +47,8 @@ class ContentViewController: UIViewController {
         label.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         label.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
     }
-
+    
+    func loadImage(_ imgUrl: String) {
+//        self.
+    }
 }

@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     func setBanner() {
         // 模拟数据
         var urls : [String] = []
-        for i in 0 ..< 20 {
+        for i in 0 ..< 10 {
             let str = "图片 \(i)"
             urls.append(str)
         }
