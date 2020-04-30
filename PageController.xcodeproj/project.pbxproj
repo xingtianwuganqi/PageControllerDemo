@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C43CB95224580F02002F57DF /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43CB95124580F02002F57DF /* OtherViewController.swift */; };
+		C45D6871245A7ECF00A7DE2C /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45D6870245A7ECF00A7DE2C /* BannerView.swift */; };
 		C49A6AD32457D2BB00D6864C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49A6AD22457D2BB00D6864C /* AppDelegate.swift */; };
 		C49A6AD52457D2BB00D6864C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49A6AD42457D2BB00D6864C /* SceneDelegate.swift */; };
 		C49A6AD72457D2BB00D6864C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49A6AD62457D2BB00D6864C /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		C43CB95124580F02002F57DF /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
+		C45D6870245A7ECF00A7DE2C /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		C49A6ACF2457D2BB00D6864C /* PageController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49A6AD22457D2BB00D6864C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C49A6AD42457D2BB00D6864C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				C49A6AD22457D2BB00D6864C /* AppDelegate.swift */,
 				C49A6AD42457D2BB00D6864C /* SceneDelegate.swift */,
 				C49A6AD62457D2BB00D6864C /* ViewController.swift */,
+				C45D6870245A7ECF00A7DE2C /* BannerView.swift */,
 				C49A6B022457D7DC00D6864C /* PageController.swift */,
 				C49A6B042457D80700D6864C /* ContentViewController.swift */,
 				C43CB95124580F02002F57DF /* OtherViewController.swift */,
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C45D6871245A7ECF00A7DE2C /* BannerView.swift in Sources */,
 				C49A6B052457D80700D6864C /* ContentViewController.swift in Sources */,
 				C43CB95224580F02002F57DF /* OtherViewController.swift in Sources */,
 				C49A6B032457D7DC00D6864C /* PageController.swift in Sources */,

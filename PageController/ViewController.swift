@@ -8,16 +8,31 @@
 
 import UIKit
 
+let ScreenW = UIScreen.main.bounds.size.width
+let ScreenH = UIScreen.main.bounds.size.height
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = .white
+        setBanner()
     }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let page = PageController.init()
-        self.present(page, animated: true, completion: nil)
+    
+    func setBanner() {
+        // 模拟数据
+        var urls : [String] = []
+        for i in 0 ..< 20 {
+            let str = "图片 \(i)"
+            urls.append(str)
+        }
+        
+        let bannerView = BannerView(timeInterveal: 3)
+        bannerView.frame = CGRect(x: 0, y: 0, width: ScreenW, height: 300)
+        self.view.addSubview(bannerView)
+        bannerView.showImgUrls(urls: urls) { (index) in
+            print(index)
+        }
     }
 }
 
