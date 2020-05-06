@@ -12,11 +12,26 @@ let ScreenW = UIScreen.main.bounds.size.width
 let ScreenH = UIScreen.main.bounds.size.height
 
 class ViewController: UIViewController {
+    
+    lazy var tableview: UITableView = {
+        let tableView = UITableView.init(frame: .zero, style: .grouped)
+        tableView.delegate = self
+        tableView.dataSource = self
+        return tableView
+    }()
 
+    private var dataSource: [String] = ["第0行","第1行"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        setBanner()
+        setTableview()
+    }
+    
+    func setTableview() {
+        self.view.addSubview(self.tableview)
+        self.tableview.frame = self.view.frame
+        self.tableview.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
     func setBanner() {
@@ -36,3 +51,28 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController : UITableViewDelegate ,UITableViewDataSource{
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.dataSource.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = self.dataSource[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            break
+        default:
+            let VC = JDPageController()
+            self.navigationController?.pushViewController(VC, animated: true)
+        }
+    }
+}
