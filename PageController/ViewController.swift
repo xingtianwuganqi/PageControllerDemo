@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         return tableView
     }()
 
-    private var dataSource: [String] = ["第0行","第1行"]
+    private var dataSource: [String] = ["banner","仿JD分类页面"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +69,8 @@ extension ViewController : UITableViewDelegate ,UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            break
+            let vc = BannerController()
+            self.navigationController?.pushViewController(vc, animated: true)
         default:
             let VC = JDPageController()
             self.navigationController?.pushViewController(VC, animated: true)

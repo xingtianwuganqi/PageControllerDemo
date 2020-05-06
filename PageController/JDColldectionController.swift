@@ -77,6 +77,7 @@ class JDColldectionController: UIViewController {
         for i in 0 ..< 20 {
             self.dataSource.append("第\(i)行")
         }
+        self.dataSource.append("上拉继续浏览")
         self.tableview.reloadData()
     }
 

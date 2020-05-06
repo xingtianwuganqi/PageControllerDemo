@@ -28,7 +28,6 @@ class JDPageController: UIViewController {
         return backview
     }()
     private var pages : [UIViewController] = []
-    
     private var dataSource: [String] = ["第0行","第1行","第2行","第3行","第4行","第5行","第6行","第7行","第8行","第9行"]
     
     private var didSelectIndex: Int = 0
@@ -121,6 +120,11 @@ extension JDPageController : UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath)
         cell.textLabel?.text = self.dataSource[indexPath.row]
+        if indexPath.row == self.didSelectIndex {
+            cell.textLabel?.textColor = .red
+        }else{
+            cell.textLabel?.textColor = .gray
+        }
         return cell
     }
     
@@ -129,40 +133,19 @@ extension JDPageController : UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         self.showSelectPage(index: indexPath.row)
+        self.didSelectIndex = indexPath.row
+        self.tableview.reloadData()
     }
 }
 
 extension JDPageController : UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-//        var index = self.index(controller: viewController)
-//        if index == 0 || index == NSNotFound {
-//            return nil
-//        }
-//
-//        index -= 1
-//        if self.pages.count > index {
-//            return self.pages[index]
-//        }else{
-//            return nil
-//        }
         return nil
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        
-//        var index = self.index(controller: viewController)
-//        if index == NSNotFound {
-//            return nil
-//        }
-//
-//        index += 1
-//        if self.pages.count > index {
-//            return self.pages[index]
-//        }else{
-//            return nil
-//        }
+    
         return nil
     }
     
@@ -193,6 +176,8 @@ extension JDPageController: PageDetailDelegate {
         if self.pages.count > index {
             self.showSelectPage(index: index)
         }
+        self.didSelectIndex = index
+        self.tableview.reloadData()
     }
     
     func pullBottomAction() {
@@ -208,5 +193,7 @@ extension JDPageController: PageDetailDelegate {
         if self.pages.count > index {
             self.showSelectPage(index: index)
         }
+        self.didSelectIndex = index
+        self.tableview.reloadData()
     }
 }

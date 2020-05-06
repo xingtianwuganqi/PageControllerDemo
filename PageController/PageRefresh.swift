@@ -20,13 +20,13 @@ class PageRefreshHeader : MJRefreshHeader {
     
     override func prepare() {
         super.prepare()
-        self.mj_h = 120
+        self.mj_h = 100
         self.addSubview(label)
     }
     
     override func placeSubviews() {
         super.placeSubviews()
-        self.label.frame = CGRect(x: 0, y: 50, width: ScreenW, height: 50)
+        self.label.frame = CGRect(x: 0, y: 50, width: ScreenW - 80, height: 50)
     }
     
     override func scrollViewPanStateDidChange(_ change: [AnyHashable : Any]?) {
@@ -66,7 +66,7 @@ class PageRefreshFooter : MJRefreshBackFooter  {
     
     override func prepare() {
         super.prepare()
-        self.mj_h = 100
+        self.mj_h = 80
         self.addSubview(label)
     }
     
@@ -92,9 +92,9 @@ class PageRefreshFooter : MJRefreshBackFooter  {
         didSet {
             switch state {
             case .idle:
-                self.label.text = "上拉继续浏览"
+                self.label.text = ""
             default:
-                self.label.text = "上拉继续浏览"
+                self.label.text = ""
             }
         }
     }

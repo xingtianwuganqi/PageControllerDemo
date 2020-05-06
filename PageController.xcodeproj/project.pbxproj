@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C43CB95224580F02002F57DF /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43CB95124580F02002F57DF /* OtherViewController.swift */; };
 		C4594E582461351F008CB0BE /* JDPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4594E572461351F008CB0BE /* JDPageController.swift */; };
 		C4594E5A24613C92008CB0BE /* JDColldectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4594E5924613C92008CB0BE /* JDColldectionController.swift */; };
 		C4594E8C2461534B008CB0BE /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C4594E5C2461534B008CB0BE /* UIScrollView+MJRefresh.m */; };
@@ -32,6 +31,7 @@
 		C4594E9F2461534B008CB0BE /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4594E872461534B008CB0BE /* MJRefreshAutoFooter.m */; };
 		C4594EA02461534B008CB0BE /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = C4594E892461534B008CB0BE /* MJRefreshComponent.m */; };
 		C4594EA3246155FB008CB0BE /* PageRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4594EA2246155FB008CB0BE /* PageRefresh.swift */; };
+		C4594EA9246268C8008CB0BE /* BannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4594EA8246268C8008CB0BE /* BannerController.swift */; };
 		C45D6871245A7ECF00A7DE2C /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45D6870245A7ECF00A7DE2C /* BannerView.swift */; };
 		C49A6AD32457D2BB00D6864C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49A6AD22457D2BB00D6864C /* AppDelegate.swift */; };
 		C49A6AD52457D2BB00D6864C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49A6AD42457D2BB00D6864C /* SceneDelegate.swift */; };
@@ -63,7 +63,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C43CB95124580F02002F57DF /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		C4594E572461351F008CB0BE /* JDPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDPageController.swift; sourceTree = "<group>"; };
 		C4594E5924613C92008CB0BE /* JDColldectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDColldectionController.swift; sourceTree = "<group>"; };
 		C4594E5C2461534B008CB0BE /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
@@ -110,6 +109,7 @@
 		C4594E8B2461534B008CB0BE /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
 		C4594EA1246153F4008CB0BE /* bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
 		C4594EA2246155FB008CB0BE /* PageRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageRefresh.swift; sourceTree = "<group>"; };
+		C4594EA8246268C8008CB0BE /* BannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerController.swift; sourceTree = "<group>"; };
 		C45D6870245A7ECF00A7DE2C /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		C49A6ACF2457D2BB00D6864C /* PageController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49A6AD22457D2BB00D6864C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -278,10 +278,10 @@
 				C49A6AD22457D2BB00D6864C /* AppDelegate.swift */,
 				C49A6AD42457D2BB00D6864C /* SceneDelegate.swift */,
 				C49A6AD62457D2BB00D6864C /* ViewController.swift */,
+				C4594EA8246268C8008CB0BE /* BannerController.swift */,
 				C45D6870245A7ECF00A7DE2C /* BannerView.swift */,
 				C49A6B022457D7DC00D6864C /* PageController.swift */,
 				C49A6B042457D80700D6864C /* ContentViewController.swift */,
-				C43CB95124580F02002F57DF /* OtherViewController.swift */,
 				C4594E572461351F008CB0BE /* JDPageController.swift */,
 				C4594E5924613C92008CB0BE /* JDColldectionController.swift */,
 				C4594EA2246155FB008CB0BE /* PageRefresh.swift */,
@@ -446,6 +446,7 @@
 			files = (
 				C4594E582461351F008CB0BE /* JDPageController.swift in Sources */,
 				C4594E922461534B008CB0BE /* UIView+MJExtension.m in Sources */,
+				C4594EA9246268C8008CB0BE /* BannerController.swift in Sources */,
 				C4594E912461534B008CB0BE /* NSBundle+MJRefresh.m in Sources */,
 				C4594E942461534B008CB0BE /* MJRefreshBackStateFooter.m in Sources */,
 				C4594E902461534B008CB0BE /* UIScrollView+MJExtension.m in Sources */,
@@ -456,7 +457,6 @@
 				C4594E5A24613C92008CB0BE /* JDColldectionController.swift in Sources */,
 				C4594E972461534B008CB0BE /* MJRefreshAutoGifFooter.m in Sources */,
 				C49A6B052457D80700D6864C /* ContentViewController.swift in Sources */,
-				C43CB95224580F02002F57DF /* OtherViewController.swift in Sources */,
 				C49A6B032457D7DC00D6864C /* PageController.swift in Sources */,
 				C4594E9B2461534B008CB0BE /* MJRefreshGifHeader.m in Sources */,
 				C49A6AD72457D2BB00D6864C /* ViewController.swift in Sources */,
