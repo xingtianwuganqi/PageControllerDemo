@@ -55,7 +55,11 @@ class JDColldectionController: UIViewController {
     func setTableview() {
         self.view.addSubview(self.tableview)
         self.tableview.translatesAutoresizingMaskIntoConstraints = false
-        self.tableview.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
+        if #available(iOS 11.0, *) {
+            self.tableview.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
+        } else {
+            self.tableview.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 64).isActive = true
+        }
         self.tableview.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         self.tableview.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         self.tableview.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true

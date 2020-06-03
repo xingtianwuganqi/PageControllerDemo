@@ -43,6 +43,7 @@
 		C49A6AF52457D2BC00D6864C /* PageControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49A6AF42457D2BC00D6864C /* PageControllerUITests.swift */; };
 		C49A6B032457D7DC00D6864C /* PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49A6B022457D7DC00D6864C /* PageController.swift */; };
 		C49A6B052457D80700D6864C /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49A6B042457D80700D6864C /* ContentViewController.swift */; };
+		C49B16032487824E00C0E1BE /* LocalNotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49B16022487824E00C0E1BE /* LocalNotificationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		C49A6AF62457D2BC00D6864C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C49A6B022457D7DC00D6864C /* PageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageController.swift; sourceTree = "<group>"; };
 		C49A6B042457D80700D6864C /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		C49B16022487824E00C0E1BE /* LocalNotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +287,7 @@
 				C4594E572461351F008CB0BE /* JDPageController.swift */,
 				C4594E5924613C92008CB0BE /* JDColldectionController.swift */,
 				C4594EA2246155FB008CB0BE /* PageRefresh.swift */,
+				C49B16022487824E00C0E1BE /* LocalNotificationController.swift */,
 				C4594EA1246153F4008CB0BE /* bridge.h */,
 				C49A6AD82457D2BB00D6864C /* Main.storyboard */,
 				C49A6ADB2457D2BC00D6864C /* Assets.xcassets */,
@@ -458,6 +461,7 @@
 				C4594E972461534B008CB0BE /* MJRefreshAutoGifFooter.m in Sources */,
 				C49A6B052457D80700D6864C /* ContentViewController.swift in Sources */,
 				C49A6B032457D7DC00D6864C /* PageController.swift in Sources */,
+				C49B16032487824E00C0E1BE /* LocalNotificationController.swift in Sources */,
 				C4594E9B2461534B008CB0BE /* MJRefreshGifHeader.m in Sources */,
 				C49A6AD72457D2BB00D6864C /* ViewController.swift in Sources */,
 				C4594EA3246155FB008CB0BE /* PageRefresh.swift in Sources */,
@@ -649,6 +653,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SX73SRB2SL;
 				INFOPLIST_FILE = PageController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -668,6 +673,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SX73SRB2SL;
 				INFOPLIST_FILE = PageController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         return tableView
     }()
 
-    private var dataSource: [String] = ["banner","仿JD分类页面"]
+    private var dataSource: [String] = ["banner","仿JD分类页面","本地通知"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,9 +71,14 @@ extension ViewController : UITableViewDelegate ,UITableViewDataSource{
         case 0:
             let vc = BannerController()
             self.navigationController?.pushViewController(vc, animated: true)
-        default:
+        case 1:
             let VC = JDPageController()
             self.navigationController?.pushViewController(VC, animated: true)
+        case 2:
+            let vc = LocalNotificationController.init()
+            self.navigationController?.pushViewController(vc, animated: true)
+        default:
+            return
         }
     }
 }
