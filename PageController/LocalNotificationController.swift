@@ -34,6 +34,7 @@ class LocalNotificationController: UIViewController {
                 print("添加成功")
             }
         }
+        // 注册通知
         center.requestAuthorization(options: [.alert,.sound,.badge]) { (finish, error) in
             if let err = error {
                 print(err.localizedDescription)
