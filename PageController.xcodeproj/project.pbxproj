@@ -32,6 +32,9 @@
 		C4594EA02461534B008CB0BE /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = C4594E892461534B008CB0BE /* MJRefreshComponent.m */; };
 		C4594EA3246155FB008CB0BE /* PageRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4594EA2246155FB008CB0BE /* PageRefresh.swift */; };
 		C4594EA9246268C8008CB0BE /* BannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4594EA8246268C8008CB0BE /* BannerController.swift */; };
+		C45B836F25762F6B009BFD16 /* ContentPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45B836E25762F6B009BFD16 /* ContentPageViewController.swift */; };
+		C45B837425763342009BFD16 /* PageDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45B837325763342009BFD16 /* PageDemoViewController.swift */; };
+		C45B837925763480009BFD16 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45B837825763480009BFD16 /* ColorViewController.swift */; };
 		C45D6871245A7ECF00A7DE2C /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45D6870245A7ECF00A7DE2C /* BannerView.swift */; };
 		C49A6AD32457D2BB00D6864C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49A6AD22457D2BB00D6864C /* AppDelegate.swift */; };
 		C49A6AD52457D2BB00D6864C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49A6AD42457D2BB00D6864C /* SceneDelegate.swift */; };
@@ -111,6 +114,9 @@
 		C4594EA1246153F4008CB0BE /* bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
 		C4594EA2246155FB008CB0BE /* PageRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageRefresh.swift; sourceTree = "<group>"; };
 		C4594EA8246268C8008CB0BE /* BannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerController.swift; sourceTree = "<group>"; };
+		C45B836E25762F6B009BFD16 /* ContentPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentPageViewController.swift; sourceTree = "<group>"; };
+		C45B837325763342009BFD16 /* PageDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDemoViewController.swift; sourceTree = "<group>"; };
+		C45B837825763480009BFD16 /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 		C45D6870245A7ECF00A7DE2C /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		C49A6ACF2457D2BB00D6864C /* PageController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49A6AD22457D2BB00D6864C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -253,6 +259,37 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		C45B836525762E4C009BFD16 /* JDCategroyPage */ = {
+			isa = PBXGroup;
+			children = (
+				C4594E572461351F008CB0BE /* JDPageController.swift */,
+				C4594E5924613C92008CB0BE /* JDColldectionController.swift */,
+				C4594EA2246155FB008CB0BE /* PageRefresh.swift */,
+			);
+			path = JDCategroyPage;
+			sourceTree = "<group>";
+		};
+		C45B836925762EA0009BFD16 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				C4594EA8246268C8008CB0BE /* BannerController.swift */,
+				C45D6870245A7ECF00A7DE2C /* BannerView.swift */,
+				C49A6B022457D7DC00D6864C /* PageController.swift */,
+				C49A6B042457D80700D6864C /* ContentViewController.swift */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
+		C45B836A25762EC2009BFD16 /* ContentPage */ = {
+			isa = PBXGroup;
+			children = (
+				C45B836E25762F6B009BFD16 /* ContentPageViewController.swift */,
+				C45B837325763342009BFD16 /* PageDemoViewController.swift */,
+				C45B837825763480009BFD16 /* ColorViewController.swift */,
+			);
+			path = ContentPage;
+			sourceTree = "<group>";
+		};
 		C49A6AC62457D2BA00D6864C = {
 			isa = PBXGroup;
 			children = (
@@ -280,13 +317,9 @@
 				C49A6AD22457D2BB00D6864C /* AppDelegate.swift */,
 				C49A6AD42457D2BB00D6864C /* SceneDelegate.swift */,
 				C49A6AD62457D2BB00D6864C /* ViewController.swift */,
-				C4594EA8246268C8008CB0BE /* BannerController.swift */,
-				C45D6870245A7ECF00A7DE2C /* BannerView.swift */,
-				C49A6B022457D7DC00D6864C /* PageController.swift */,
-				C49A6B042457D80700D6864C /* ContentViewController.swift */,
-				C4594E572461351F008CB0BE /* JDPageController.swift */,
-				C4594E5924613C92008CB0BE /* JDColldectionController.swift */,
-				C4594EA2246155FB008CB0BE /* PageRefresh.swift */,
+				C45B836925762EA0009BFD16 /* Banner */,
+				C45B836525762E4C009BFD16 /* JDCategroyPage */,
+				C45B836A25762EC2009BFD16 /* ContentPage */,
 				C49B16022487824E00C0E1BE /* LocalNotificationController.swift */,
 				C4594EA1246153F4008CB0BE /* bridge.h */,
 				C49A6AD82457D2BB00D6864C /* Main.storyboard */,
@@ -461,13 +494,16 @@
 				C4594E972461534B008CB0BE /* MJRefreshAutoGifFooter.m in Sources */,
 				C49A6B052457D80700D6864C /* ContentViewController.swift in Sources */,
 				C49A6B032457D7DC00D6864C /* PageController.swift in Sources */,
+				C45B837925763480009BFD16 /* ColorViewController.swift in Sources */,
 				C49B16032487824E00C0E1BE /* LocalNotificationController.swift in Sources */,
 				C4594E9B2461534B008CB0BE /* MJRefreshGifHeader.m in Sources */,
 				C49A6AD72457D2BB00D6864C /* ViewController.swift in Sources */,
+				C45B836F25762F6B009BFD16 /* ContentPageViewController.swift in Sources */,
 				C4594EA3246155FB008CB0BE /* PageRefresh.swift in Sources */,
 				C49A6AD32457D2BB00D6864C /* AppDelegate.swift in Sources */,
 				C4594E8E2461534B008CB0BE /* MJRefreshConfig.m in Sources */,
 				C4594E8D2461534B008CB0BE /* MJRefreshConst.m in Sources */,
+				C45B837425763342009BFD16 /* PageDemoViewController.swift in Sources */,
 				C4594E8C2461534B008CB0BE /* UIScrollView+MJRefresh.m in Sources */,
 				C4594E9A2461534B008CB0BE /* MJRefreshStateHeader.m in Sources */,
 				C4594E962461534B008CB0BE /* MJRefreshAutoStateFooter.m in Sources */,

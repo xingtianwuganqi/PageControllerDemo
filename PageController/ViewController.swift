@@ -20,11 +20,12 @@ class ViewController: UIViewController {
         return tableView
     }()
 
-    private var dataSource: [String] = ["banner","仿JD分类页面","本地通知"]
+    private var dataSource: [String] = ["无限轮播Banner","仿JD分类页面","左右滑动分页"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        self.title = "UIPageViewController的使用Demo"
         setTableview()
     }
     
@@ -75,7 +76,12 @@ extension ViewController : UITableViewDelegate ,UITableViewDataSource{
             let VC = JDPageController()
             self.navigationController?.pushViewController(VC, animated: true)
         case 2:
-            let vc = LocalNotificationController.init()
+            let pages = [
+                ColorViewController.init(color: .gray),
+                ColorViewController.init(color: .green),
+                ColorViewController.init(color: .blue)
+            ]
+            let vc = PageDemoViewController.init(pages: pages, defaultIndex: 0)
             self.navigationController?.pushViewController(vc, animated: true)
         default:
             return
